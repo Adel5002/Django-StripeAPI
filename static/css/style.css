@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.item-left-side {
+    width: 345px;
+}
+
+.item-img {
+    width: 300px;
+    margin: 10px;
+}
+
+.item-right-side {
+    width: 350px;
+}

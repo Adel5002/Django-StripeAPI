@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}{{ item.name }}{% endblock %}
+
+
+{% block content %}
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-sm-4">
+            <div class="item-left-side">
+                <h1 class="mb-3">{{ item.name }}</h1>
+                <div class="form-control">
+                    <img class="item-img" src="{% static 'images/photo_2023-12-20_18-42-16.jpg' %}" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="col mt-5">
+            <div class="item-right-side float-end">
+                <strong>{{ item.description }}</strong>
+                <p>{{ item.price }}$</p>
+                <hr>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-primary" type="button">Buy</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

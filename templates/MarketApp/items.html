@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Items {% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row mt-5">
+        {% for item in items %}
+            <div class="col-sm-3">
+                <div class="card" style="width: 18rem;">
+                    <img src="{% static 'images/photo_2023-12-20_18-42-16.jpg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ item.name }}</h5>
+                        <p class="card-text">{{ item.description }}</p>
+                        <a href="{{ item.get_absolute_url }}" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
