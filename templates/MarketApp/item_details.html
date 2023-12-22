@@ -17,12 +17,16 @@
         </div>
         <div class="col mt-5">
             <div class="item-right-side float-end">
-                <strong>{{ item.description }}</strong>
-                <p>{{ item.price }}$</p>
-                <hr>
-                <div class="d-grid gap-2">
-                    <button class="btn btn-primary" type="button">Buy</button>
-                </div>
+                <form id="buy-item-form" action="{% url 'create_item' item.id %}" method="post">
+                    {% csrf_token %}
+                    <strong>{{ item.description }}</strong>
+                    <p> price {{ item.price }}$</p>
+                    <hr>
+                    <div class="d-grid gap-2">
+                        <button class="btn btn-primary" value="{{ item.id }}"
+                            id="buy-item-id" type="submit">Buy</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
