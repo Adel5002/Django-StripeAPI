@@ -17,7 +17,7 @@
         </div>
         <div class="col mt-5">
             <div class="item-right-side float-end">
-                <form id="buy-item-form" action="{% url 'create_item' item.id %}" method="post">
+                <form id="buy-item-form" action="{% url 'create_order_item' item.id %}" method="post">
                     {% csrf_token %}
                     <strong>{{ item.description }}</strong>
                     <p> price {{ item.price }}$</p>
